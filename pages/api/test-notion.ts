@@ -1,5 +1,8 @@
 /** @format */
 
+// This is a test API route to check if the Notion integration is working.
+// It fetches the blog posts from the Notion database and returns them as a JSON response.
+
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { getBlogPosts } from '../../lib/notion';
 
