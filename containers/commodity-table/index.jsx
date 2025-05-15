@@ -231,7 +231,7 @@ const CommodityTable = ({ commoditiesList = [], path }) => {
                 </td>
                 <td
                   className={`px-0 py-4 ${
-                    item.c / item.o > 1 ? 'text-green-500' : 'text-red-500'
+                    item.c / item.o > 1 ? 'text-pink-500' : 'text-red-500'
                   }`}>
                   <Link
                     href={`${path}/${item.symbol.toLowerCase()}-vs-btc`}
@@ -245,7 +245,7 @@ const CommodityTable = ({ commoditiesList = [], path }) => {
                       (item.o / item.ratio) /
                       sevenDaySingleCommodityData(item.symbol) >
                     1
-                      ? 'text-green-500'
+                      ? 'text-pink-500'
                       : 'text-red-500'
                   }`}>
                   <Link
@@ -267,7 +267,7 @@ const CommodityTable = ({ commoditiesList = [], path }) => {
                       (item.o / item.ratio) /
                       thirtyDaySingleCommodityData(item.symbol) >
                     1
-                      ? 'text-green-500'
+                      ? 'text-pink-500'
                       : 'text-red-500'
                   }`}>
                   <Link
@@ -289,7 +289,7 @@ const CommodityTable = ({ commoditiesList = [], path }) => {
                       (item.o / item.ratio) /
                       ninetyDaySingleCommodityData(item.symbol) >
                     1
-                      ? 'text-green-500'
+                      ? 'text-pink-500'
                       : 'text-red-500'
                   }`}>
                   <Link
@@ -311,7 +311,7 @@ const CommodityTable = ({ commoditiesList = [], path }) => {
                       (item.o / item.ratio) /
                       yearDaySingleCommodityData(item.symbol) >
                     1
-                      ? 'text-green-500'
+                      ? 'text-pink-500'
                       : 'text-red-500'
                   }`}>
                   <Link

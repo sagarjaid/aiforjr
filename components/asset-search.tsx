@@ -256,7 +256,7 @@ export function AssetSearch() {
                           <div className='flex items-center p-3'>
                             <div className='flex-1'>
                               <div className='flex items-center gap-2'>
-                                <div className='h-8 w-8 rounded-full bg-green-500/20 flex items-center justify-center text-primary'>
+                                <div className='h-8 w-8 rounded-full bg-pink-500/20 flex items-center justify-center text-primary'>
                                   {asset.symbol.charAt(0)}
                                 </div>
                                 <div>

@@ -172,13 +172,13 @@ const BondsTable = ({ bondsList = [], path }: BondsTableProps) => {
                   </td>
                   <td
                     className={`px-0 py-4 ${
-                      oneDayChange >= 0 ? 'text-green-500' : 'text-red-500'
+                      oneDayChange >= 0 ? 'text-pink-500' : 'text-red-500'
                     }`}>
                     {isNaN(oneDayChange) ? '-' : `${oneDayChange.toFixed(2)}%`}
                   </td>
                   <td
                     className={`px-0 py-4 ${
-                      sevenDayChange >= 0 ? 'text-green-500' : 'text-red-500'
+                      sevenDayChange >= 0 ? 'text-pink-500' : 'text-red-500'
                     }`}>
                     {isNaN(sevenDayChange)
                       ? '-'
@@ -186,7 +186,7 @@ const BondsTable = ({ bondsList = [], path }: BondsTableProps) => {
                   </td>
                   <td
                     className={`px-0 py-4 ${
-                      thirtyDayChange >= 0 ? 'text-green-500' : 'text-red-500'
+                      thirtyDayChange >= 0 ? 'text-pink-500' : 'text-red-500'
                     }`}>
                     {isNaN(thirtyDayChange)
                       ? '-'
@@ -194,7 +194,7 @@ const BondsTable = ({ bondsList = [], path }: BondsTableProps) => {
                   </td>
                   <td
                     className={`px-0 py-4 ${
-                      ninetyDayChange >= 0 ? 'text-green-500' : 'text-red-500'
+                      ninetyDayChange >= 0 ? 'text-pink-500' : 'text-red-500'
                     }`}>
                     {isNaN(ninetyDayChange)
                       ? '-'
@@ -202,7 +202,7 @@ const BondsTable = ({ bondsList = [], path }: BondsTableProps) => {
                   </td>
                   <td
                     className={`pr-4 py-4 ${
-                      oneYearChange >= 0 ? 'text-green-500' : 'text-red-500'
+                      oneYearChange >= 0 ? 'text-pink-500' : 'text-red-500'
                     }`}>
                     {isNaN(oneYearChange)
                       ? '-'

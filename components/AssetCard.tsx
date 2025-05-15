@@ -133,7 +133,7 @@ const AssetCard = ({ name, symbol, category }: AssetCardProps) => {
           </div>
           <div
             className={`text-[8px] ${
-              assetData.oneDayChange >= 0 ? 'text-green-500' : 'text-red-500'
+              assetData.oneDayChange >= 0 ? 'text-pink-500' : 'text-red-500'
             }`}>
             {assetData.oneDayChange >= 0 ? '+' : ''}
             {assetData.oneDayChange.toFixed(2)}%

@@ -191,7 +191,7 @@ export function AssetSearch() {
 
       <div className='relative'>
         <div className='relative group'>
-          <div className='absolute -inset-[2px] bg-gradient-to-r from-green-600 via-blue-600 to-yellow-600 rounded-full blur-sm opacity-100 group-focus-within:opacity-0 transition-all duration-300 animate-gradient'></div>
+          <div className='absolute -inset-[2px] bg-gradient-to-r from-pink-600 via-pink-600 to-yellow-600 rounded-full blur-sm opacity-100 group-focus-within:opacity-0 transition-all duration-300 animate-gradient'></div>
           <Input
             ref={inputRef}
             type='text'
@@ -277,7 +277,7 @@ export function AssetSearch() {
                           <div className='flex items-center p-3'>
                             <div className='flex-1'>
                               <div className='flex items-center gap-2'>
-                                <div className='h-8 w-8 rounded-full bg-green-500/20 flex items-center justify-center text-primary'>
+                                <div className='h-8 w-8 rounded-full bg-pink-500/20 flex items-center justify-center text-primary'>
                                   {asset.symbol.charAt(0)}
                                 </div>
                                 <div>

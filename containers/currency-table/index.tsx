@@ -313,7 +313,7 @@ export default function CurrencyTable({
               </td>
               <td
                 className={`px-0 py-4 ${
-                  item.c / item.o > 1 ? 'text-green-500' : 'text-red-500'
+                  item.c / item.o > 1 ? 'text-pink-500' : 'text-red-500'
                 }`}>
                 <Link
                   href={`${path}/${item.symbol.toLowerCase()}-vs-btc`}
@@ -324,7 +324,7 @@ export default function CurrencyTable({
               <td
                 className={`px-0 py-4 ${
                   item.c / item.sevenDayChange > 1
-                    ? 'text-green-500'
+                    ? 'text-pink-500'
                     : 'text-red-500'
                 }`}>
                 <Link
@@ -336,7 +336,7 @@ export default function CurrencyTable({
               <td
                 className={`px-0 py-4 ${
                   item.c / item.thirtyDayChange > 1
-                    ? 'text-green-500'
+                    ? 'text-pink-500'
                     : 'text-red-500'
                 }`}>
                 <Link
@@ -348,7 +348,7 @@ export default function CurrencyTable({
               <td
                 className={`px-0 py-4 ${
                   item.c / item.ninetyDayChange > 1
-                    ? 'text-green-500'
+                    ? 'text-pink-500'
                     : 'text-red-500'
                 }`}>
                 <Link
@@ -360,7 +360,7 @@ export default function CurrencyTable({
               <td
                 className={`pr-4 py-4 ${
                   item.c / item.yearDayChange > 1
-                    ? 'text-green-500'
+                    ? 'text-pink-500'
                     : 'text-red-500'
                 }`}>
                 <Link

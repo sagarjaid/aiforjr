@@ -2,55 +2,23 @@
 
 'use client';
 
-import Image from 'next/image';
 import Link from 'next/link';
-import { useTheme } from 'next-themes';
-import config from '@/config';
+import Image from 'next/image';
 import logo from '@/app/logo.png';
-import logo2 from '@/app/logo-2.png';
-import icon from '@/app/icon.png';
-import { useState, useEffect } from 'react';
-
 interface LogoProps {
-  className?: string;
-  isCollapsed?: boolean;
   priority?: boolean;
+  className?: string;
 }
 
-const Logo = ({
-  className = '',
-  isCollapsed = false,
-  priority = false,
-}: LogoProps) => {
-  const { theme, resolvedTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  const getLogo = () => {
-    if (isCollapsed) {
-      return icon;
-    }
-    return resolvedTheme === 'dark' ? logo2 : logo;
-  };
-
-  if (!mounted) {
-    return null;
-  }
-
+const Logo = ({ priority = false, className = '' }: LogoProps) => {
   return (
     <Link
-      className={`flex items-center gap-2 shrink-0 ${className}`}
       href='/'
-      title={`${config.appName} homepage`}>
+      className={`flex items-center space-x-2 ${className}`}>
       <Image
-        src={getLogo()}
-        alt={`${config.appName} logo`}
-        className={`transition-all duration-300 ${
-          isCollapsed ? 'w-[40px]' : 'w-[130px]'
-        }`}
+        src={logo}
+        alt='logo'
+        className={`transition-all duration-300 w-[90px]`}
         priority={priority}
         width={100}
         height={50}

@@ -28,7 +28,7 @@ export const metadata = getSEOTags({
     "Compare any asset values directly against Bitcoin's current market price.",
   canonicalUrlRelative: '/',
   extraTags: {
-    'google-site-verification': 'bpVto528QOEsbHsk4o2dP8yL3DMcQb6kFWjoQUgSoq0',
+    'google-site-verification': 'XXXX',
   },
 });
 

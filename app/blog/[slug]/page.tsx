@@ -183,7 +183,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               />
 
               {/* Main Notion Content */}
-              <div className='prose prose-lg dark:prose-invert max-w-3xl text-justify'>
+              <div className='prose ppink-lg dark:ppink-invert max-w-3xl text-justify'>
                 {blocks.map(renderNotionBlock)}
               </div>
 
@@ -213,7 +213,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 </div>
               </div>
               {/* CTA Section */}
-              <div className='  border border-green-600 rounded-lg p-6 h-64 flex flex-col justify-center items-center text-center mt-8'>
+              <div className='  border border-pink-600 rounded-lg p-6 h-64 flex flex-col justify-center items-center text-center mt-8'>
                 <h3 className='text-2xl font-bold mb-2 max-w-xl mx-auto text-muted-foreground text-center'>
                   What&apos;s the price of BTC against Stock?
                 </h3>
@@ -225,7 +225,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
                 <Link
                   href={`/stock`}
-                  className='border border-green-600 bg-green-600 hover:bg-green-700 text-white rounded-sm  gap-1.5 font-bold py-4 px-6  flex items-center h-12 transition-colors'>
+                  className='border border-pink-600 bg-pink-600 hover:bg-pink-700 text-white rounded-sm  gap-1.5 font-bold py-4 px-6  flex items-center h-12 transition-colors'>
                   <span>Check BTC price against Stocks</span>
                   <span>🚀</span>
                 </Link>

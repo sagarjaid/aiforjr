@@ -70,7 +70,7 @@ const Headline = () => {
               <div className='flex gap-1.5'>
                 <div className='w-3 h-3 rounded-full bg-red-500'></div>
                 <div className='w-3 h-3 rounded-full bg-yellow-500'></div>
-                <div className='w-3 h-3 rounded-full bg-green-500'></div>
+                <div className='w-3 h-3 rounded-full bg-pink-500'></div>
               </div>
               <div className='flex-1 bg-white rounded-md h-6 flex items-center px-3 text-sm text-gray-500'>
                 basedinbitcoin.com

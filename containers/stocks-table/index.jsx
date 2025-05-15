@@ -209,7 +209,7 @@ const StocksTable = ({ stocksList = [], path }) => {
                 </td>
                 <td
                   className={`px-0 py-4 ${
-                    item.c / item.o > 1 ? 'text-green-500' : 'text-red-500'
+                    item.c / item.o > 1 ? 'text-pink-500' : 'text-red-500'
                   }`}>
                   <Link
                     href={`${path}/${item.symbol.toLowerCase()}-vs-btc`}
@@ -223,7 +223,7 @@ const StocksTable = ({ stocksList = [], path }) => {
                       (item.o / item.ratio) /
                       sevenDaySingleStockData(item.symbol) >
                     1
-                      ? 'text-green-500'
+                      ? 'text-pink-500'
                       : 'text-red-500'
                   }`}>
                   <Link
@@ -245,7 +245,7 @@ const StocksTable = ({ stocksList = [], path }) => {
                       (item.o / item.ratio) /
                       thirtyDaySingleStockData(item.symbol) >
                     1
-                      ? 'text-green-500'
+                      ? 'text-pink-500'
                       : 'text-red-500'
                   }`}>
                   <Link
@@ -267,7 +267,7 @@ const StocksTable = ({ stocksList = [], path }) => {
                       (item.o / item.ratio) /
                       ninetyDaySingleStockData(item.symbol) >
                     1
-                      ? 'text-green-500'
+                      ? 'text-pink-500'
                       : 'text-red-500'
                   }`}>
                   <Link
@@ -289,7 +289,7 @@ const StocksTable = ({ stocksList = [], path }) => {
                       (item.o / item.ratio) /
                       yearDaySingleStockData(item.symbol) >
                     1
-                      ? 'text-green-500'
+                      ? 'text-pink-500'
                       : 'text-red-500'
                   }`}>
                   <Link

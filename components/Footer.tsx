@@ -3,8 +3,8 @@
 'use client';
 
 import Link from 'next/link';
-import config from '@/config';
 import { useTheme } from 'next-themes';
+import { Facebook, Twitter, Instagram, Linkedin, Mail } from 'lucide-react';
 import Logo from './Logo';
 
 // Add the Footer to the bottom of your landing page and more.
@@ -12,82 +12,123 @@ import Logo from './Logo';
 
 const Footer = () => {
   const { theme } = useTheme();
+  const currentYear = new Date().getFullYear();
+
+  const footerLinks = {
+    company: [
+      {
+        label: 'LinkedIn',
+        href: 'https://www.linkedin.com/company/ai-for-kids',
+      },
+      { label: 'Facebook', href: 'https://www.facebook.com/ai-for-kids' },
+      { label: 'Instagram', href: 'https://www.instagram.com/ai-for-kids' },
+      { label: 'Twitter', href: 'https://www.twitter.com/ai-for-kids' },
+    ],
+    resources: [
+      { label: 'Curriculum', href: '#curriculum' },
+      { label: 'Pricing', href: '#pricing' },
+    ],
+    legal: [
+      { label: 'Privacy Policy', href: '#privacy' },
+      { label: 'Terms of Service', href: '#terms' },
+      { label: 'Cookie Policy', href: '#cookies' },
+      { label: 'GDPR', href: '#gdpr' },
+    ],
+  };
+
+  const socialLinks = [
+    { icon: Facebook, href: 'https://facebook.com', label: 'Facebook' },
+    { icon: Twitter, href: 'https://twitter.com', label: 'Twitter' },
+    { icon: Instagram, href: 'https://instagram.com', label: 'Instagram' },
+    { icon: Linkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
+  ];
 
   return (
-    <footer className='border-t border-border bg-background'>
-      <div className='max-w-7xl mx-auto px-8 py-24'>
-        <div className='flex lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col'>
-          <div className='w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left'>
-            <Logo
-              className='justify-center md:justify-start'
-              priority={true}
-            />
-
-            <p className='mt-3 text-sm text-muted-foreground'>
-              {config.appDescription}
-            </p>
-            <p className='mt-3 text-sm text-muted-foreground/60'>
-              Copyright © {new Date().getFullYear()} - All rights reserved
-            </p>
-          </div>
-
-          <div className='flex-grow flex flex-wrap justify-center -mb-10 md:mt-0 mt-10'>
-            <div className='lg:w-1/3 md:w-1/2 w-full px-4'>
-              <div className='font-semibold text-foreground tracking-widest text-sm text-center md:text-left mb-3'>
-                LINKS
+    <footer className='bg-white border-t border-gray-100'>
+      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+        {/* Main Footer */}
+        <div className='py-16'>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
+            {/* Brand Section */}
+            <div className='space-y-4'>
+              <div className='flex items-center'>
+                <Logo priority={true} />
               </div>
-
-              <div className='flex flex-col justify-center items-center md:items-start gap-1 mb-10'>
-                <Link
-                  href='/stock'
-                  className='text-sm  leading-6 text-foreground/80 hover:text-foreground transition-colors'>
-                  Stocks
-                </Link>
-                <Link
-                  href='/commodity/gld-vs-btc'
-                  className='text-sm  leading-6 text-foreground/80 hover:text-foreground transition-colors'>
-                  Commodities
-                </Link>
-                <Link
-                  href='/currency'
-                  className='text-sm leading-6 text-foreground/80 hover:text-foreground transition-colors'>
-                  Currencies
-                </Link>
-                <Link
-                  href='/real-estate'
-                  className='text-sm leading-6 text-foreground/80 hover:text-foreground transition-colors'>
-                  Real Estate
-                </Link>
-                <Link
-                  href='/indices'
-                  className='text-sm  leading-6 text-foreground/80 hover:text-foreground transition-colors'>
-                  Indices
-                </Link>
-                <Link
-                  href='/bond'
-                  className='text-sm  leading-6 text-foreground/80 hover:text-foreground transition-colors'>
-                  Bonds
-                </Link>
-              </div>
+              <p className='text-gray-600 text-sm'>
+                Empowering the next generation with AI education and real-world
+                projects.
+              </p>
             </div>
 
-            <div className='lg:w-1/3 md:w-1/2 w-full px-4'>
-              <div className='font-semibold text-foreground tracking-widest text-sm text-center md:text-left mb-3'>
-                LEGAL
-              </div>
+            {/* Resources Links */}
+            <div>
+              <h3 className='text-sm font-semibold text-gray-900 uppercase tracking-wider mb-4'>
+                Important Links
+              </h3>
+              <ul className='space-y-3'>
+                {footerLinks.resources.map((link) => (
+                  <li key={link.label}>
+                    <Link
+                      href={link.href}
+                      className='text-gray-600 hover:text-pink-600 text-sm transition-colors'>
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
 
-              <div className='flex flex-col justify-center items-center md:items-start gap-1 mb-10'>
-                <Link
-                  href='/tos'
-                  className='text-sm  leading-6 text-foreground/80 hover:text-foreground transition-colors'>
-                  Terms of services
-                </Link>
-                <Link
-                  href='/privacy-policy'
-                  className='text-sm leading-6 text-foreground/80 hover:text-foreground transition-colors'>
-                  Privacy policy
-                </Link>
-              </div>
+            {/* Social Links */}
+            <div>
+              <h3 className='text-sm font-semibold text-gray-900 uppercase tracking-wider mb-4'>
+                Socials
+              </h3>
+              <ul className='space-y-3'>
+                {footerLinks.company.map((link) => (
+                  <li key={link.label}>
+                    <Link
+                      href={link.href}
+                      className='text-gray-600 hover:text-pink-600 text-sm transition-colors'>
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Legal Links */}
+            <div>
+              <h3 className='text-sm font-semibold text-gray-900 uppercase tracking-wider mb-4'>
+                Legal
+              </h3>
+              <ul className='space-y-3'>
+                {footerLinks.legal.map((link) => (
+                  <li key={link.label}>
+                    <Link
+                      href={link.href}
+                      className='text-gray-600 hover:text-pink-600 text-sm transition-colors'>
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom Bar */}
+        <div className='py-6 border-t border-gray-100'>
+          <div className='flex flex-col md:flex-row items-center justify-between gap-4'>
+            <p className='text-gray-600 text-sm'>
+              © {currentYear} AIforJr. All rights reserved.
+            </p>
+            <div className='flex items-center gap-4'>
+              <a
+                href='mailto:hello@aiforjr.com'
+                className='text-gray-600 hover:text-pink-600 text-sm transition-colors flex items-center gap-1'>
+                <Mail className='h-4 w-4' />
+                hello@aiforjr.com
+              </a>
             </div>
           </div>
         </div>
