@@ -213,20 +213,18 @@ export default function WhyAIForKids() {
 
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <Link
-            href='/locations/india'
-            className='block w-[60%] mx-auto my-16'>
-            <Button className='w-full bg-gradient-to-r from-pink-600 to-pink-700 hover:from-pink-700 hover:to-pink-800 text-white text-lg py-6 rounded-xl shadow-lg transition-all duration-300 transform hover:scale-[1.02]'>
-              <svg
-                className='w-6 h-6 mr-2'
-                xmlns='http://www.w3.org/2000/svg'
-                height='24px'
-                viewBox='0 -960 960 960'
-                width='24px'
-                fill='currentColor'>
-                <path d='M200-80q-33 0-56.5-23.5T120-160v-560q0-33 23.5-56.5T200-800h40v-80h80v80h320v-80h80v80h40q33 0 56.5 23.5T840-720v560q0 33-23.5 56.5T760-80H200Zm0-80h560v-400H200v400Zm0-480h560v-80H200v80Zm0 0v-80 80Zm280 240q-17 0-28.5-11.5T440-440q0-17 11.5-28.5T480-480q17 0 28.5 11.5T520-440q0 17-11.5 28.5T480-400Zm-160 0q-17 0-28.5-11.5T280-440q0-17 11.5-28.5T320-480q17 0 28.5 11.5T360-440q0 17-11.5 28.5T320-400Zm320 0q-17 0-28.5-11.5T600-440q0-17 11.5-28.5T640-480q17 0 28.5 11.5T680-440q0 17-11.5 28.5T640-400ZM480-240q-17 0-28.5-11.5T440-280q0-17 11.5-28.5T480-320q17 0 28.5 11.5T520-280q0 17-11.5 28.5T480-240Zm-160 0q-17 0-28.5-11.5T280-280q0-17 11.5-28.5T320-320q17 0 28.5 11.5T360-280q0 17-11.5 28.5T320-240Zm320 0q-17 0-28.5-11.5T600-280q0-17 11.5-28.5T640-320q17 0 28.5 11.5T680-280q0 17-11.5 28.5T640-240Z' />
-              </svg>
-              Book a FREE Trial Class
-            </Button>
+            href={'/locations/india'}
+            className='flex items-center justify-center bg-gradient-to-r my-16 from-pink-600 to-pink-700 hover:from-pink-700 hover:to-pink-800 text-white text-lg py-3 px-8 rounded-xl shadow-lg  font-semibold transition-all duration-300 hover:scale-[1.02] hover:shadow-lg'>
+            <svg
+              className='w-5 h-5 mr-2'
+              xmlns='http://www.w3.org/2000/svg'
+              height='24px'
+              viewBox='0 -960 960 960'
+              width='24px'
+              fill='currentColor'>
+              <path d='M200-80q-33 0-56.5-23.5T120-160v-560q0-33 23.5-56.5T200-800h40v-80h80v80h320v-80h80v80h40q33 0 56.5 23.5T840-720v560q0 33-23.5 56.5T760-80H200Zm0-80h560v-400H200v400Zm0-480h560v-80H200v80Zm0 0v-80 80Zm280 240q-17 0-28.5-11.5T440-440q0-17 11.5-28.5T480-480q17 0 28.5 11.5T520-440q0 17-11.5 28.5T480-400Zm-160 0q-17 0-28.5-11.5T280-440q0-17 11.5-28.5T320-480q17 0 28.5 11.5T360-440q0 17-11.5 28.5T320-400Zm320 0q-17 0-28.5-11.5T600-440q0-17 11.5-28.5T640-480q17 0 28.5 11.5T680-440q0 17-11.5 28.5T640-400ZM480-240q-17 0-28.5-11.5T440-280q0-17 11.5-28.5T480-320q17 0 28.5 11.5T520-280q0 17-11.5 28.5T480-240Zm-160 0q-17 0-28.5-11.5T280-280q0-17 11.5-28.5T320-320q17 0 28.5 11.5T360-280q0 17-11.5 28.5T320-240Zm320 0q-17 0-28.5-11.5T600-280q0-17 11.5-28.5T640-320q17 0 28.5 11.5T680-280q0 17-11.5 28.5T640-240Z' />
+            </svg>
+            Book a FREE Trial Class
           </Link>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {/* Logic */}

@@ -8,7 +8,6 @@ import ClientLayout from '@/components/LayoutClient';
 import GoogleAnalytics from '@/components/GoogleAnalytics';
 import config from '@/config';
 import './globals.css';
-import { ThemeProvider } from '../components/theme-provider';
 
 const font = Bricolage_Grotesque({ subsets: ['latin'] });
 
@@ -39,17 +38,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       className={font.className}
       suppressHydrationWarning>
       <body>
-        <ThemeProvider
-          attribute='class'
-          defaultTheme='system'
-          enableSystem
-          disableTransitionOnChange
-          storageKey='theme'
-          forcedTheme={undefined}>
-          <GoogleAnalytics />
-          {/* ClientLayout contains all the client wrappers (Crisp chat support, toast messages, tooltips, etc.) */}
-          <ClientLayout>{children}</ClientLayout>
-        </ThemeProvider>
+        <GoogleAnalytics />
+        {/* ClientLayout contains all the client wrappers (Crisp chat support, toast messages, tooltips, etc.) */}
+        <ClientLayout>{children}</ClientLayout>
       </body>
     </html>
   );
